@@ -1119,6 +1119,16 @@ export default function App () {
   const [questionSet, setQuestionSet] = useState<Question[]>(easyChemQuestions)
   const currentQuestion = questionSet[questionIndex]
   // const [topic, setTopic] = useState("") add topics later. 
+  const [history, setHistory] = useState<string[]>([])
+  
+  const BackHandle = () => {
+    const previousPage = history[history.length - 1]
+
+    if (previousPage) {
+      setHistory((prev) => prev.slice(0, -1));
+      setPage(previousPage)
+    }
+  }
 
   function checkAnswer(choice: string) {
     if (choice === currentQuestion.correct) {
@@ -1214,11 +1224,12 @@ export default function App () {
             setDifficulty("G12")
             setPage("Quiz")
           }}/>
-
-          <h1 className='p4'>
-            {subject} CHOSEN
-          </h1>
-
+          <button 
+          className='back'
+          onClick={BackHandle}
+          >
+          BACK
+          </button>
         </div>
       )}
       {page === "Quiz" && (
