@@ -1119,14 +1119,19 @@ export default function App () {
   const [questionSet, setQuestionSet] = useState<Question[]>(easyChemQuestions)
   const currentQuestion = questionSet[questionIndex]
   // const [topic, setTopic] = useState("") add topics later. 
-  const [history, setHistory] = useState<string[]>([])
   
   const BackHandle = () => {
-    const previousPage = history[history.length - 1]
+    if (page === "subjects") {
+      setPage("home")
+    }
+    else if (page === "difficulty") {
+      setPage("subjects")
+    }
 
-    if (previousPage) {
-      setHistory((prev) => prev.slice(0, -1));
-      setPage(previousPage)
+    else if (page === "Quiz") {
+      setPage("difficulty")
+      setScore(0)
+      setQuestionIndex(0)
     }
   }
 
@@ -1171,6 +1176,13 @@ export default function App () {
             setSubject("BIOLOGY")
             setPage("difficulty")
             }}/>
+
+          <button 
+          className='back'
+          onClick={BackHandle}
+          >
+          BACK
+          </button>
         </div>         
       )}
 
@@ -1373,6 +1385,13 @@ export default function App () {
               ))}
             </div>
           )}
+
+          <button 
+          className='back'
+          onClick={BackHandle}
+          >
+          BACK
+          </button>
         </div>
       )}
       
