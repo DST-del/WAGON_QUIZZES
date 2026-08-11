@@ -226,7 +226,7 @@ body {
   border: 1px solid #000;
   cursor: pointer;
   background-color: #e0e0e0;
-  width: 80px;
+  width: 160px;
   height: 80px;
   position: fixed;
   left: 20px;
@@ -234,7 +234,7 @@ body {
 
 }
 
-.choices:hover {
+.back:hover {
   background-color: #E0E0E0;
   color: black;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,3.6);
