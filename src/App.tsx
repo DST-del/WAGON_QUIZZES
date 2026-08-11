@@ -1,5 +1,7 @@
 import './App.css'
 import { useState } from 'react'
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function StartButton ( { onStart }: {onStart: () => void}) {
 
@@ -868,7 +870,7 @@ const easyBioQuestions = [
       "Biotic factor",
       "Abiotic factor",
       "Decomposer",
-      "Producer,"
+      "Producer",
     ],
     correct: "Biotic factor",
   },
@@ -1391,7 +1393,8 @@ export default function App () {
         </div>
       )}
      
-     
+    <Analytics />
+    <SpeedInsights />
     </div>
   )
 }
