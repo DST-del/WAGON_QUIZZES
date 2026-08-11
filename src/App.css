@@ -226,10 +226,10 @@ body {
   border: 1px solid #000;
   cursor: pointer;
   background-color: #e0e0e0;
-  width: 120px;
+  width: 90px;
   height: 40px;
   position: fixed;
-  left: 20px;
+  left: 10px;
   top: 20px;
 
 }
