@@ -169,7 +169,7 @@ body {
   gap: 100px;
 }
 
-.easy {
+.G10 {
   font-family: Roboto, sans-serif;
   padding: 30px 70px; 
   border: 1px solid #000;
@@ -180,7 +180,7 @@ body {
   text-align: center;
 }
 
-.medium {
+.G11 {
   font-family: Roboto, sans-serif;
   padding: 30px 59px; 
   border: 1px solid #000;
@@ -191,7 +191,7 @@ body {
   text-align: center;
 }
 
-.hard {
+.G12 {
   font-family: Roboto, sans-serif;
   padding: 30px 70px; 
   border: 1px solid #000;
@@ -214,12 +214,13 @@ body {
   text-align: center;
   border: 1px solid #000;
   cursor: pointer;
-  font-size: 20px; 
+  font-size: 19px; 
   width: 400px;
-  height: 120px;
+  min-height: 80px;
   transition-duration: 0.4s;
   background-color: #ffffff;
   gap: 200px;
+  line-height: 1.4;
 }
 
 .choices:hover {

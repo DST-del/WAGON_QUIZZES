@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react'
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function StartButton ( { onStart }: {onStart: () => void}) {
 
@@ -67,45 +67,45 @@ function SubjectSelection() {
   )
 }
 
-function DifficultySelection() {
+function GradeSelection() {
   return (
     <div>
       <h1 className='p3'>
-        CHOOSE A DIFFICULTY
+        CHOOSE A GRADE
       </h1>
     </div>
   )
 }
 
-function EasyButton ({ onDifficulty }: {onDifficulty: () => void}) {
+function G10Button ({ onGrade }: {onGrade: () => void}) {
   return (
     <button 
-      className='easy'
-      onClick={onDifficulty}
+      className='G10'
+      onClick={onGrade}
     >
-      EASY (G10)
+      Grade 10
     </button>
   )
 }
 
-function MediumButton ({ onDifficulty }: {onDifficulty: () => void}) {
+function G11Button ({ onGrade }: {onGrade: () => void}) {
   return (
     <button 
-      className='medium'
-      onClick={onDifficulty}
+      className='G11'
+      onClick={onGrade}
     >
-      MEDIUM (G11)
+      Grade 11
     </button>
   )
 }
 
-function HardButton ({ onDifficulty }: {onDifficulty: () => void}) {
+function G12Button ({ onGrade }: {onGrade: () => void}) {
   return (
     <button 
-      className='hard'
-      onClick={onDifficulty}
+      className='G12'
+      onClick={onGrade}
     >
-      HARD (G12)
+      Grade 12
     </button>
   )
 }
@@ -1166,8 +1166,8 @@ export default function App () {
 
       {page === "difficulty" && (
         <div className='diffselection'>
-          <DifficultySelection/>
-          <EasyButton onDifficulty={() => {
+          <GradeSelection/>
+          <G10Button onGrade={() => {
             if (subject === 'CHEMISTRY') {
               setQuestionSet(easyChemQuestions)
             }
@@ -1179,10 +1179,10 @@ export default function App () {
             if (subject === 'BIOLOGY') {
               setQuestionSet(easyBioQuestions)
             }
-            setDifficulty("EASY")
+            setDifficulty("G10")
             setPage("Quiz")
           }}/>
-          <MediumButton onDifficulty={() => {
+          <G11Button onGrade={() => {
 
             if (subject === 'CHEMISTRY') {
               setQuestionSet(mediumChemQuestions)
@@ -1195,10 +1195,10 @@ export default function App () {
             if (subject === 'BIOLOGY') {
               setQuestionSet(mediumBioQuestions)
             }
-            setDifficulty("MEDIUM")
+            setDifficulty("G11")
             setPage("Quiz")
           }}/>
-          <HardButton onDifficulty={() => {
+          <G12Button onGrade={() => {
 
             if (subject === "CHEMISTRY") {
               setQuestionSet(hardChemQuestions)
@@ -1211,7 +1211,7 @@ export default function App () {
             if (subject === "BIOLOGY") {
               setQuestionSet(hardBioQuestions)
             }
-            setDifficulty("HARD")
+            setDifficulty("G12")
             setPage("Quiz")
           }}/>
 
@@ -1227,7 +1227,7 @@ export default function App () {
             {difficulty}
           </h1>
 
-          {subject === "CHEMISTRY" && difficulty === "EASY" && (
+          {subject === "CHEMISTRY" && difficulty === "G10" && (
             <div>
               <h1 className='p6'>
                 {currentQuestion.question}
@@ -1243,7 +1243,7 @@ export default function App () {
             </div>
           )}
 
-          {subject === "CHEMISTRY" && difficulty === "MEDIUM" && (
+          {subject === "CHEMISTRY" && difficulty === "G11" && (
             <div>
               <h1 className='p6'>
                 {currentQuestion.question}
@@ -1258,7 +1258,7 @@ export default function App () {
             </div>
           )}
 
-          {subject === "CHEMISTRY" && difficulty === "HARD" && (
+          {subject === "CHEMISTRY" && difficulty === "G12" && (
             <div>
               <h1 className='p6'>
                 {currentQuestion.question}
@@ -1273,7 +1273,7 @@ export default function App () {
             </div>
           )}
 
-          {subject === 'PHYSICS' && difficulty === "EASY" && (
+          {subject === 'PHYSICS' && difficulty === "G10" && (
             <div>
               <h1 className='p6'>
                 {currentQuestion.question}
@@ -1288,7 +1288,7 @@ export default function App () {
             </div>
           )}
 
-          {subject === 'PHYSICS' && difficulty === "MEDIUM" && (
+          {subject === 'PHYSICS' && difficulty === "G11" && (
             <div>
               <h1 className='p6'>
                 {currentQuestion.question}
@@ -1303,7 +1303,7 @@ export default function App () {
             </div>
           )}
 
-          {subject === 'PHYSICS' && difficulty === "HARD" && (
+          {subject === 'PHYSICS' && difficulty === "G12" && (
             <div>
               <h1 className='p6'>
                 {currentQuestion.question}
@@ -1318,7 +1318,7 @@ export default function App () {
             </div>
           )}
 
-          {subject === 'BIOLOGY' && difficulty === "EASY" && (
+          {subject === 'BIOLOGY' && difficulty === "G10" && (
             <div>
               <h1 className='p6'>
                 {currentQuestion.question}
@@ -1333,7 +1333,7 @@ export default function App () {
             </div>
           )}
 
-          {subject === 'BIOLOGY' && difficulty === "MEDIUM" && (
+          {subject === 'BIOLOGY' && difficulty === "G11" && (
             <div>
               <h1 className='p6'>
                 {currentQuestion.question}
@@ -1348,7 +1348,7 @@ export default function App () {
             </div>
           )}
 
-          {subject === 'BIOLOGY' && difficulty === "HARD" && (
+          {subject === 'BIOLOGY' && difficulty === "G12" && (
             <div>
               <h1 className='p6'>
                 {currentQuestion.question}
