@@ -135,23 +135,22 @@ body {
 
 .backHome {
   font-family: Roboto, sans-serif;
-  font-size: 19px; 
-  padding: 30px 70px;
-  cursor: pointer;
-  border: 1px solid #000;
-  background-color: #06f42a;
   transition-duration: 0.4s;
+  text-align: center;
+  font-size: 19px;
+  border: 1px solid #000;
+  cursor: pointer;
+  background-color: #e0e0e0;
   width: 90px;
   height: 40px;
   position: fixed;
   left: 10px;
   top: 20px;
-  text-align: center;
 }
 
 .backHome:hover {
-  background-color: #06f42a;
-  color: white;
+  background-color: #E0E0E0;
+  color: black;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,3.6);
 }
 
@@ -365,6 +364,7 @@ body {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
+  gap: 15px; 
 }
 
 .incorrectAnswercontainer {
