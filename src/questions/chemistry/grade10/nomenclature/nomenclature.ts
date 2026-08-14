@@ -9,4 +9,15 @@ export const nomenclature = [
         ],
         correct: "C3H8",
     },
+
+    {
+        question: "What is the IUPAC name for this formula? FeCl3",
+        choices: [
+            "Iron Chloride",
+            "Iron (III) Chloride",
+            "Iron (II) Chlorine",
+            "Iron (III) Chlorine",
+        ],
+        correct: "Iron (III) Chloride",
+    },
 ]
