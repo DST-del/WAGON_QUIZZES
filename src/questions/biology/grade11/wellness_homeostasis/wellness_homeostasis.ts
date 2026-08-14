@@ -1,4 +1,4 @@
-export const easykinematics = [
+export const wellness_homeostasis = [
     {
         question: "",
         choices: [],
