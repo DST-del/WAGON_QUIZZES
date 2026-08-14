@@ -278,7 +278,7 @@ export default function App () {
 
       {page === "Topic" && (
         <div>
-          if {subject === "CHEMISTRY" && difficulty === "G10" && (
+          {subject === "CHEMISTRY" && difficulty === "G10" && (
             <div className='container3'>
               <button
               onClick = {() => {
@@ -323,7 +323,7 @@ export default function App () {
             </div>
           )}
 
-          if {subject === "CHEMISTRY" && difficulty === "G11" && (
+          {subject === "CHEMISTRY" && difficulty === "G11" && (
             <div className='container4'>
               <button
               onClick = {() => {
@@ -377,7 +377,7 @@ export default function App () {
             </div>
 
           )}
-          if {subject === "CHEMISTRY" && difficulty === "G12" && (
+          {subject === "CHEMISTRY" && difficulty === "G12" && (
             <div className='container5'>
               <button
               onClick = {() => {
@@ -441,7 +441,7 @@ export default function App () {
             </div>
           )}
 
-          if {subject === "PHYSICS" && difficulty === "G10" && (
+          {subject === "PHYSICS" && difficulty === "G10" && (
             <div className='container6'>
               <button
               onClick = {() => {
@@ -465,7 +465,7 @@ export default function App () {
             </div>
           )}
 
-          if {subject === "PHYSICS" && difficulty === "G11" && (
+          {subject === "PHYSICS" && difficulty === "G11" && (
             <div className='container7'>
               <button
               onClick = {() => {
@@ -539,7 +539,7 @@ export default function App () {
             </div>
           )}
 
-          if {subject === "PHYSICS" && difficulty === "G12" && (
+          {subject === "PHYSICS" && difficulty === "G12" && (
             <div className='container8'>
               <button
               onClick = {() => {
@@ -588,7 +588,7 @@ export default function App () {
                 setQuestionSet(momentum_work_energy)
               }}
               >
-                MOMENTUM_WORK_ENERGY
+                MOMENTUM, WORK,AND ENERGY
               </button>
 
               <button
@@ -633,7 +633,7 @@ export default function App () {
             </div>
           )}
 
-          if {subject === "BIOLOGY" && difficulty === "G10" && (
+          {subject === "BIOLOGY" && difficulty === "G10" && (
             <div className='container9'>
               <button
               onClick = {() => {
@@ -647,7 +647,7 @@ export default function App () {
             </div>
           )}
 
-          if {subject === "BIOLOGY" && difficulty === "G11" && (
+          {subject === "BIOLOGY" && difficulty === "G11" && (
             <div className='container10'>
               <button
               onClick = {() => {
@@ -711,7 +711,7 @@ export default function App () {
             </div>
           )}
 
-          if {subject === "BIOLOGY" && difficulty === "G12" && (
+          {subject === "BIOLOGY" && difficulty === "G12" && (
             <div className='container11'>
               <button
               onClick = {() => {
