@@ -1535,7 +1535,7 @@ export default function App () {
             SCORE: {score}/{questionSet.length}
           </h1>
 
-          <div>
+          <div className='incorrectAnswercontainer'>
             {IncorrectQuestion.map((currentQuestion) => (
               <p 
               key = {currentQuestion.question}
