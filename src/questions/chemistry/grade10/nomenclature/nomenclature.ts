@@ -11,7 +11,7 @@ export const nomenclature = [
     },
 
     {
-        question: "What is the IUPAC name for this formula? FeCl3",
+        question: "What is the name of FeCL3?",
         choices: [
             "Iron Chloride",
             "Iron (III) Chloride",

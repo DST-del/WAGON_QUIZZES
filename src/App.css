@@ -141,6 +141,11 @@ body {
   border: 1px solid #000;
   background-color: #06f42a;
   transition-duration: 0.4s;
+  width: 90px;
+  height: 40px;
+  position: fixed;
+  left: 10px;
+  top: 20px;
 }
 
 .backHome:hover {
