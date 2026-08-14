@@ -56,12 +56,12 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 120vh;
+  height: 80vh;
   text-align: center;
   font-family: Roboto, sans-serif;
   font-size: 40px; 
   background-color: #F1F8E9;
-  gap: 80px;
+  gap: 40px;
 }
 
 .container7 {

@@ -71,6 +71,7 @@ type Question = {
   correct: string;
 }
 
+
 function ChemButton( {onSelect}: {onSelect: () => void}) {
   return (
     <button 
@@ -178,6 +179,7 @@ export default function App () {
   const [questionSet, setQuestionSet] = useState<Question[]>(easyAtomicStructure_questions)
   const currentQuestion = questionSet[questionIndex]
   const [topic, setTopic] = useState("")
+  const [IncorrectQuestion, setIncorrectQuestion] = useState<Question[]>([])
   
   const BackHandle = () => {
     if (page === "subjects") {
@@ -205,6 +207,11 @@ export default function App () {
     if (choice === currentQuestion.correct) {
       setScore(previousScore => previousScore + 1)
     }
+
+     if (choice !== currentQuestion.correct) {
+      setIncorrectQuestion((prevQuestion) => [...prevQuestion, currentQuestion])
+    }
+
     if (questionIndex < questionSet.length - 1) {
       setQuestionIndex(previousquestionIndex => previousquestionIndex + 1)
     } else {
@@ -1527,6 +1534,15 @@ export default function App () {
           <h1 className='p8'>
             SCORE: {score}/{questionSet.length}
           </h1>
+
+          <div>
+            {IncorrectQuestion.map((currentQuestion) => (
+              <p key = {currentQuestion.question}>
+                Question: {currentQuestion.question}
+                Correct Answer: {currentQuestion.correct}
+              </p>
+            ))}
+          </div>
 
         <button
           className='backHome'
