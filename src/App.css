@@ -26,6 +26,7 @@ body {
   font-size: 40px; 
   background-color: #F1F8E9;
   gap: 40px;
+  cursor: pointer;
 }
 
 .container4 {
@@ -38,6 +39,7 @@ body {
   font-size: 40px; 
   background-color: #F1F8E9;
   gap: 40px;
+  cursor: pointer;
 }
 
 .container5 {
@@ -50,6 +52,7 @@ body {
   font-size: 40px; 
   background-color: #F1F8E9;
   gap: 40px;
+  cursor: pointer;
 }
 
 .container6 {
@@ -62,6 +65,7 @@ body {
   font-size: 40px; 
   background-color: #F1F8E9;
   gap: 40px;
+  cursor: pointer;
 }
 
 .container7 {
@@ -74,6 +78,7 @@ body {
   font-size: 40px; 
   background-color: #F1F8E9;
   gap: 40px;
+  cursor: pointer;
 }
 
 .container8 {
@@ -86,6 +91,7 @@ body {
   font-size: 40px; 
   background-color: #F1F8E9;
   gap: 40px;
+  cursor: pointer;
 }
 
 .container9 {
@@ -98,6 +104,7 @@ body {
   font-size: 40px; 
   background-color: #F1F8E9;
   gap: 40px;
+  cursor: pointer;
 }
 
 .container10 {
@@ -110,6 +117,7 @@ body {
   font-size: 40px; 
   background-color: #F1F8E9;
   gap: 40px;
+  cursor: pointer;
 }
 
 .container11 {
@@ -122,6 +130,7 @@ body {
   font-size: 40px; 
   background-color: #F1F8E9;
   gap: 40px;
+  cursor: pointer;
 }
 
 .backHome {
@@ -342,4 +351,13 @@ body {
   background-color: #E0E0E0;
   color: black;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,3.6);
+}
+
+.incorrectAnswer {
+  text-align: left;
+  color: black;
+  font-family: Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }

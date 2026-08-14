@@ -1537,7 +1537,10 @@ export default function App () {
 
           <div>
             {IncorrectQuestion.map((currentQuestion) => (
-              <p key = {currentQuestion.question}>
+              <p 
+              key = {currentQuestion.question}
+              className='incorrectAnswer'
+              >
                 Question: {currentQuestion.question}
                 Correct Answer: {currentQuestion.correct}
               </p>
