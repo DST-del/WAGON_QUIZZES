@@ -1542,6 +1542,7 @@ export default function App () {
               className='incorrectAnswer'
               >
                 Question: {currentQuestion.question}
+                <br />
                 Correct Answer: {currentQuestion.correct}
               </p>
             ))}
