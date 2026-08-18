@@ -186,6 +186,8 @@ export default function App () {
       () => Math.random() - 0.5
     )
     setQuestionSet(shuffleQuestionSet.slice(0, 12))
+    setScore(0)
+    setQuestionIndex(0)
 
 }
   
