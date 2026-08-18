@@ -178,7 +178,6 @@ export default function App () {
   const [score, setScore] = useState(0)
   const [questionSet, setQuestionSet] = useState<Question[]>(easyAtomicStructure_questions)
   const currentQuestion = questionSet[questionIndex]
-  const [topic, setTopic] = useState("")
   const [IncorrectQuestion, setIncorrectQuestion] = useState<Question[]>([])
 
   function randomQuiz(questionSet:Question[]) {
@@ -204,7 +203,6 @@ export default function App () {
 
     else if (page === "Topic") {
       setPage("difficulty")
-      setTopic("")
     }
 
     else if (page === "Quiz") {
@@ -301,7 +299,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade10atomstructure")
                 randomQuiz(easyAtomicStructure_questions)
               } }
               >                  
@@ -311,7 +308,6 @@ export default function App () {
               <button 
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade10acids_and_bases")
                 randomQuiz(easyacidsandbases_Questions)
               }}
               >
@@ -321,7 +317,6 @@ export default function App () {
               <button 
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade10chemEquations")
                 randomQuiz(easyChemEquations_questions)
               }}
               >
@@ -331,7 +326,6 @@ export default function App () {
               <button 
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("nomenclature")
                 randomQuiz(nomenclature)
               }}
               >
@@ -346,7 +340,7 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11chemreactions")
+
                 randomQuiz(mediumchemReactions)
               }}
               >                  
@@ -356,7 +350,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11gaslaws")
                 randomQuiz(mediumGasLaws)
               }}
               >                  
@@ -366,7 +359,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11organicchem")
                 randomQuiz(mediumOrganicChem)
               }}
               >                  
@@ -376,7 +368,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11physicalpropertiesofmatter")
                 randomQuiz(mediumphysicalpropofmatter)
               }}
               >                  
@@ -386,7 +377,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11solutions")
                 randomQuiz(mediumSolutions)
               }}
               >                  
@@ -400,7 +390,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12acidsandbases")
                 randomQuiz(hardacids_and_bases)
               }}
               >                  
@@ -410,7 +399,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12aqueousreactions")
                 randomQuiz(hardaqueousReactions)
               }}
               >                  
@@ -420,7 +408,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12atomicstructure")
                 randomQuiz(hardatomicStructure)
               }}
               >                  
@@ -430,7 +417,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12electrochem")
                 randomQuiz(electrochemistry)
               }}
               >                  
@@ -440,7 +426,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12equilibrium")
                 randomQuiz(equilibrium)
               }}
               >                  
@@ -450,7 +435,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12kinetics")
                 randomQuiz(kinetics)
               }}
               >                  
@@ -464,7 +448,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade10kinematics")
                 randomQuiz(easykinematics)
               }}
               >
@@ -474,7 +457,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade10forces_and_energy")
                 randomQuiz(easy_forces_and_energy)
               }}
               >
@@ -488,7 +470,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11kinematics")
                 randomQuiz(medium_kinematics)
               }}
               >
@@ -498,7 +479,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11dynamics")
                 randomQuiz(mediumdynamics)
               }}
               >
@@ -508,7 +488,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11gravitational_fields")
                 randomQuiz(medium_gravitational_fields)
               }}
               >
@@ -518,7 +497,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11electricfields")
                 randomQuiz(medium_electric_fields)
               }}
               >
@@ -528,7 +506,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11magfields")
                 randomQuiz(medium_mag_fields)
               }}
               >
@@ -538,7 +515,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11waves1D")
                 randomQuiz(medium_1Dwaves)
               }}
               >
@@ -548,7 +524,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11waves2D")
                 randomQuiz(medium_2Dwaves)
               }}
               >
@@ -562,7 +537,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12kinematics")
                 randomQuiz(hard_kinematics)
               }}
               >
@@ -572,7 +546,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12dynamics")
                 randomQuiz(hard_dynamics)
               }}
               >
@@ -582,7 +555,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12projectilemotion")
                 randomQuiz(projectile_motion)
               }}
               >
@@ -592,7 +564,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12circularmotion")
                 randomQuiz(circular_motion)
               }}
               >
@@ -602,7 +573,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12momentum_work_energy")
                 randomQuiz(momentum_work_energy)
               }}
               >
@@ -612,7 +582,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12gravitational_fields")
                 randomQuiz(hard_gravitational_fields)
               }}
               >
@@ -622,7 +591,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12electricfields")
                 randomQuiz(hard_electric_fields)
               }}
               >
@@ -632,7 +600,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12electric_circuits")
                 randomQuiz(electric_circuits)
               }}
               >
@@ -642,7 +609,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12electromagneticinduction")
                 randomQuiz(electromagnetic_induction)
               }}
               >
@@ -656,7 +622,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade10ecology")
                 randomQuiz(ecology)
               }}
               >
@@ -670,7 +635,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11digestionandnutrition")
                 randomQuiz(digestion_nutrition)
               }}
               >
@@ -680,7 +644,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11transportationandrespiration")
                 randomQuiz(transportation_respiration)
               }}
               >
@@ -690,7 +653,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11wellnessandhomeostasis")
                 randomQuiz(wellness_homeostasis)
               }}
               >
@@ -700,7 +662,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11wellnessandhomeostaticchanges")
                 randomQuiz(wellness_homeostaticchanges)
               }}
               >
@@ -710,7 +671,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11excretion_wastemanagement")
                 randomQuiz(excretion_wastemanagement)
               }}
               >
@@ -720,7 +680,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade11protection_and_control")
                 randomQuiz(protection_control)
               }}
               >
@@ -734,7 +693,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12biodviersity_and_conservation")
                 randomQuiz(biodiversity_conservation)
               }}
               >
@@ -744,7 +702,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12biodiversity_and_organization")
                 randomQuiz(biodiversity_organization)
               }}
               >
@@ -754,7 +711,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12biological_inheritance")
                 randomQuiz(biological_inheritance)
               }}
               >
@@ -764,7 +720,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12evolution_and_biodiversity")
                 randomQuiz(evolution_biodiversity)
               }}
               >
@@ -774,7 +729,6 @@ export default function App () {
               <button
               onClick = {() => {
                 setPage("Quiz")
-                setTopic("grade12inheritance_and_mechanisms")
                 randomQuiz(inheritance_mechanisms)
               }}
               >
@@ -794,8 +748,7 @@ export default function App () {
       )}
       {page === "Quiz" && (
         <div>
-          {subject === "CHEMISTRY" && topic === "grade10atomstructure" && (
-            <div>
+          <div>
               <h1 className='p6'>
                 {currentQuestion.question}
               </h1>
@@ -809,724 +762,6 @@ export default function App () {
               ))}
             
             </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade10acids_and_bases" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade10chemEquations" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "nomenclature" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade11chemreactions" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade11gaslaws" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade11organicchem" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade11physicalpropertiesofmatter" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade11solutions" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade12acidsandbases" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade12aqueousreactions" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton
-                key = {choice} 
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade12atomicstructure" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade12electrochem" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade12equilibrium" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            
-            </div>
-          )}
-
-          {subject === "CHEMISTRY" && topic === "grade12kinetics" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade10kinematics" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade10forces_and_energy" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade11kinematics" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade11dynamics" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade11gravitational_fields" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade11electricfields" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade11magfields" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade11waves1D" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade11waves2D" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade12kinematics" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade12dynamics" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade12projectilemotion" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade12circularmotion" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade12momentum_work_energy" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade12gravitational_fields" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade12electricfields" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade12electric_circuits" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'PHYSICS' && topic === "grade12electromagneticinduction" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'BIOLOGY' && topic === "grade10ecology" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'BIOLOGY' && topic === "grade11digestionandnutrition" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'BIOLOGY' && topic === "grade11transportationandrespiration" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'BIOLOGY' && topic === "grade11wellnessandhomeostasis" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'BIOLOGY' && topic === "grade11wellnessandhomeosaticchanges" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'BIOLOGY' && topic === "grade11excretion_wastemanagement" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'BIOLOGY' && topic === "grade11protection_and_control" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'BIOLOGY' && topic === "grade12biodiversity_and_conservation" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'BIOLOGY' && topic === "grade12biodiversity_and_organization" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'BIOLOGY' && topic === "grade12biological_inheritance" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'BIOLOGY' && topic === "grade12evolution_and_biodiversity" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
-          {subject === 'BIOLOGY' && topic === "grade12inheritance_and_mechanisms" && (
-            <div>
-              <h1 className='p6'>
-                {currentQuestion.question}
-              </h1>
-
-              {currentQuestion.choices.map((choice) => (
-                <ChoiceButton 
-                key = {choice}
-                onAnswer={() => checkAnswer(choice)}
-                choice = {choice}
-                />
-              ))}
-            </div>
-          )}
-
           <button 
           className='back'
           onClick={BackHandle}
@@ -1566,7 +801,6 @@ export default function App () {
             setQuestionIndex(0)
             setDifficulty("")
             setSubject("")
-            setTopic("")
             setPage("home")
             setQuestionSet([])
           }}
