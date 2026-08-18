@@ -180,6 +180,14 @@ export default function App () {
   const currentQuestion = questionSet[questionIndex]
   const [topic, setTopic] = useState("")
   const [IncorrectQuestion, setIncorrectQuestion] = useState<Question[]>([])
+
+  function randomQuiz(questionSet:Question[]) {
+    const shuffleQuestionSet = [...questionSet].sort(
+      () => Math.random() - 0.5
+    )
+    setQuestionSet(shuffleQuestionSet.slice(0, 12))
+
+}
   
   const BackHandle = () => {
     if (page === "subjects") {
@@ -291,7 +299,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade10atomstructure")
-                setQuestionSet(easyAtomicStructure_questions)
+                randomQuiz(easyAtomicStructure_questions)
               } }
               >                  
                 ATOMIC STRUCTURE
@@ -301,7 +309,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade10acids_and_bases")
-                setQuestionSet(easyacidsandbases_Questions)
+                randomQuiz(easyacidsandbases_Questions)
               }}
               >
                 ACIDS AND BASES
@@ -311,7 +319,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade10chemEquations")
-                setQuestionSet(easyChemEquations_questions)
+                randomQuiz(easyChemEquations_questions)
               }}
               >
                 CHEMICAL EQUATIONS
@@ -321,7 +329,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("nomenclature")
-                setQuestionSet(nomenclature)
+                randomQuiz(nomenclature)
               }}
               >
                 NOMENCLATURE
@@ -336,7 +344,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11chemreactions")
-                setQuestionSet(mediumchemReactions)
+                randomQuiz(mediumchemReactions)
               }}
               >                  
                 CHEMICAL REACTIONS                     
@@ -346,7 +354,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11gaslaws")
-                setQuestionSet(mediumGasLaws)
+                randomQuiz(mediumGasLaws)
               }}
               >                  
                 GAS LAWS                   
@@ -356,7 +364,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11organicchem")
-                setQuestionSet(mediumOrganicChem)
+                randomQuiz(mediumOrganicChem)
               }}
               >                  
                 ORGANIC CHEMISTRY                  
@@ -366,7 +374,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11physicalpropertiesofmatter")
-                setQuestionSet(mediumphysicalpropofmatter)
+                randomQuiz(mediumphysicalpropofmatter)
               }}
               >                  
                 PROPERTIES OF MATTER                    
@@ -376,7 +384,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11solutions")
-                setQuestionSet(mediumSolutions)
+                randomQuiz(mediumSolutions)
               }}
               >                  
                 SOLUTIONS          
@@ -390,7 +398,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12acidsandbases")
-                setQuestionSet(hardacids_and_bases)
+                randomQuiz(hardacids_and_bases)
               }}
               >                  
                 ACIDS AND BASES                     
@@ -400,7 +408,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12aqueousreactions")
-                setQuestionSet(hardaqueousReactions)
+                randomQuiz(hardaqueousReactions)
               }}
               >                  
                 AQUEOUS REACTIONS                    
@@ -410,7 +418,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12atomicstructure")
-                setQuestionSet(hardatomicStructure)
+                randomQuiz(hardatomicStructure)
               }}
               >                  
                 ATOMIC STRUCTURE                    
@@ -420,7 +428,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12electrochem")
-                setQuestionSet(electrochemistry)
+                randomQuiz(electrochemistry)
               }}
               >                  
                 ELECTROCHEMISTRY               
@@ -430,7 +438,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12equilibrium")
-                setQuestionSet(equilibrium)
+                randomQuiz(equilibrium)
               }}
               >                  
                 EQUILIBRIUM                     
@@ -440,7 +448,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12kinetics")
-                setQuestionSet(kinetics)
+                randomQuiz(kinetics)
               }}
               >                  
                 KINETICS                   
@@ -454,7 +462,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade10kinematics")
-                setQuestionSet(easykinematics)
+                randomQuiz(easykinematics)
               }}
               >
                 KINEMATICS
@@ -464,7 +472,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade10forces_and_energy")
-                setQuestionSet(easy_forces_and_energy)
+                randomQuiz(easy_forces_and_energy)
               }}
               >
                 FORCES AND ENERGY
@@ -478,7 +486,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11kinematics")
-                setQuestionSet(medium_kinematics)
+                randomQuiz(medium_kinematics)
               }}
               >
                 KINEMATICS
@@ -488,7 +496,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11dynamics")
-                setQuestionSet(mediumdynamics)
+                randomQuiz(mediumdynamics)
               }}
               >
                 DYNAMICS
@@ -498,7 +506,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11gravitational_fields")
-                setQuestionSet(medium_gravitational_fields)
+                randomQuiz(medium_gravitational_fields)
               }}
               >
                 GRAVITATIONAL FIELDS
@@ -508,7 +516,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11electricfields")
-                setQuestionSet(medium_electric_fields)
+                randomQuiz(medium_electric_fields)
               }}
               >
                 ELECTRIC FIELDS
@@ -518,7 +526,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11magfields")
-                setQuestionSet(medium_mag_fields)
+                randomQuiz(medium_mag_fields)
               }}
               >
                 MAGNETIC FIELDS
@@ -528,7 +536,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11waves1D")
-                setQuestionSet(medium_1Dwaves)
+                randomQuiz(medium_1Dwaves)
               }}
               >
                 WAVES 1D
@@ -538,7 +546,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11waves2D")
-                setQuestionSet(medium_2Dwaves)
+                randomQuiz(medium_2Dwaves)
               }}
               >
                 WAVES 2D
@@ -552,7 +560,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12kinematics")
-                setQuestionSet(hard_kinematics)
+                randomQuiz(hard_kinematics)
               }}
               >
                 KINEMATICS
@@ -562,7 +570,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12dynamics")
-                setQuestionSet(hard_dynamics)
+                randomQuiz(hard_dynamics)
               }}
               >
                 DYNAMICS
@@ -572,7 +580,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12projectilemotion")
-                setQuestionSet(projectile_motion)
+                randomQuiz(projectile_motion)
               }}
               >
                 PROJECTILE MOTION
@@ -582,7 +590,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12circularmotion")
-                setQuestionSet(circular_motion)
+                randomQuiz(circular_motion)
               }}
               >
                 CIRCULAR MOTION
@@ -592,7 +600,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12momentum_work_energy")
-                setQuestionSet(momentum_work_energy)
+                randomQuiz(momentum_work_energy)
               }}
               >
                 MOMENTUM, WORK,AND ENERGY
@@ -602,7 +610,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12gravitational_fields")
-                setQuestionSet(hard_gravitational_fields)
+                randomQuiz(hard_gravitational_fields)
               }}
               >
                 GRAVITATIONAL FIELDS
@@ -612,7 +620,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12electricfields")
-                setQuestionSet(hard_electric_fields)
+                randomQuiz(hard_electric_fields)
               }}
               >
                 ELECTRIC FIELDS
@@ -622,7 +630,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12electric_circuits")
-                setQuestionSet(electric_circuits)
+                randomQuiz(electric_circuits)
               }}
               >
                 ELECTRIC CIRCUITS
@@ -632,7 +640,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12electromagneticinduction")
-                setQuestionSet(electromagnetic_induction)
+                randomQuiz(electromagnetic_induction)
               }}
               >
                 ELECTROMAGNETIC INDUCTION
@@ -646,7 +654,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade10ecology")
-                setQuestionSet(ecology)
+                randomQuiz(ecology)
               }}
               >
                 ECOLOGY
@@ -660,7 +668,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11digestionandnutrition")
-                setQuestionSet(digestion_nutrition)
+                randomQuiz(digestion_nutrition)
               }}
               >
                 DIGESTION AND NUTRITION
@@ -670,7 +678,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11transportationandrespiration")
-                setQuestionSet(transportation_respiration)
+                randomQuiz(transportation_respiration)
               }}
               >
                 TRANSPORTATION AND RESPIRATION
@@ -680,7 +688,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11wellnessandhomeostasis")
-                setQuestionSet(wellness_homeostasis)
+                randomQuiz(wellness_homeostasis)
               }}
               >
                 WELLNESS AND HOMEOSTASIS
@@ -690,7 +698,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11wellnessandhomeostaticchanges")
-                setQuestionSet(wellness_homeostaticchanges)
+                randomQuiz(wellness_homeostaticchanges)
               }}
               >
                 WELLNESS AND HOMEOSTATIC CHANGES
@@ -700,7 +708,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11excretion_wastemanagement")
-                setQuestionSet(excretion_wastemanagement)
+                randomQuiz(excretion_wastemanagement)
               }}
               >
                 EXCRETION AND WASTE MANAGEMENT
@@ -710,7 +718,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade11protection_and_control")
-                setQuestionSet(protection_control)
+                randomQuiz(protection_control)
               }}
               >
                 PROTECTION AND CONTROL
@@ -724,7 +732,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12biodviersity_and_conservation")
-                setQuestionSet(biodiversity_conservation)
+                randomQuiz(biodiversity_conservation)
               }}
               >
                 BIODIVERSITY AND CONSERVATION
@@ -734,7 +742,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12biodiversity_and_organization")
-                setQuestionSet(biodiversity_organization)
+                randomQuiz(biodiversity_organization)
               }}
               >
                 BIODIVERSITY AND ORGANIZATION
@@ -744,7 +752,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12biological_inheritance")
-                setQuestionSet(biological_inheritance)
+                randomQuiz(biological_inheritance)
               }}
               >
                 BIOLOGICAL INHERITANCE
@@ -754,7 +762,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12evolution_and_biodiversity")
-                setQuestionSet(evolution_biodiversity)
+                randomQuiz(evolution_biodiversity)
               }}
               >
                 EVOLUTION AND BIODIVERSITY
@@ -764,7 +772,7 @@ export default function App () {
               onClick = {() => {
                 setPage("Quiz")
                 setTopic("grade12inheritance_and_mechanisms")
-                setQuestionSet(inheritance_mechanisms)
+                randomQuiz(inheritance_mechanisms)
               }}
               >
                 INHERITANCE AND MECHANISMS
@@ -1565,7 +1573,7 @@ export default function App () {
           
         </div>
       )}
-     
+    
     <Analytics />
     <SpeedInsights />
     </div>
