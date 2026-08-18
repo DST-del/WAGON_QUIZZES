@@ -188,6 +188,7 @@ export default function App () {
     setQuestionSet(shuffleQuestionSet.slice(0, 12))
     setScore(0)
     setQuestionIndex(0)
+    setIncorrectQuestion([])
 
 }
   
