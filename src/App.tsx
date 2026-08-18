@@ -760,6 +760,11 @@ export default function App () {
                 choice = {choice}
                 />
               ))}
+
+              <h1>TEST</h1>
+              <p>Questions: {questionSet.length}</p>
+              <p>Index: {questionIndex}</p>
+              <p>{currentQuestion?.question ?? "NO CURRENT QUESTION"}</p>
             
             </div>
           <button 
