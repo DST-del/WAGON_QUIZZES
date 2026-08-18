@@ -746,7 +746,7 @@ export default function App () {
         </div>
         
       )}
-      {page === "Quiz" && (
+      {page === "Quiz" && currentQuestion && (
         <div>
           <div>
               <h1 className='p6'>
