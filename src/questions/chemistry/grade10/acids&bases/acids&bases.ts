@@ -106,7 +106,7 @@ export const easyacidsandbases_Questions = [
             "Strongly Basic",
             "Base"
         ],
-        correct: "Strong Acid",
+        correct: "Strongly Acidic",
     },
 
     {
