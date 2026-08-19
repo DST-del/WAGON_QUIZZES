@@ -817,4 +817,4 @@ export default function App () {
   )
 }
 
-// add motionvational quotes, images, properly website design, randomizing feature.
+// add motionvational quotes, images, properly website design
