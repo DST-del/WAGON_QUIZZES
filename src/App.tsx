@@ -818,3 +818,4 @@ export default function App () {
 }
 
 // add motionvational quotes, images, properly website design
+// add questions to: gr 10 acids and bases,

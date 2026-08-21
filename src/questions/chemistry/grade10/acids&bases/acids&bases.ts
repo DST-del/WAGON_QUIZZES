@@ -175,3 +175,5 @@ export const easyacidsandbases_Questions = [
         correct: "The metal reacts with the acid, producing a salt and hydrogen gas",
     },
 ]
+
+//add questions
