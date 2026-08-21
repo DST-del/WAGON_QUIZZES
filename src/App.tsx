@@ -790,6 +790,7 @@ export default function App () {
                 Question: {currentQuestion.question}
                 <br />
                 Correct Answer: {currentQuestion.correct}
+                <br />
               </p>
             ))}
           </div>
@@ -818,4 +819,4 @@ export default function App () {
 }
 
 // add motionvational quotes, images, properly website design
-// add questions to: gr 10 acids and bases,
+// add questions to: every single topic

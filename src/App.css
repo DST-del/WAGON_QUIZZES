@@ -1,5 +1,9 @@
 body {
   background-color: #F1F8E9;
+  background-image: url("./assets/backgroundimage.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .container1 {
